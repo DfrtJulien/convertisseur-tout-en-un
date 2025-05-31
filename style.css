@@ -1,0 +1,128 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ .sidebar {
+   width: 100%;
+   background: #333;
+   color: white;
+   padding: 1rem;
+ }
+
+ .sidebar h2 {
+   color: #fff;
+ }
+
+ .sidebar ul {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   column-gap: 15px;
+ }
+
+ .sidebar li {
+   padding: 0.5rem 0;
+   cursor: pointer;
+   transition: all 0.5s ease;
+   font-size: 20px;
+ }
+
+ .sidebar li:hover {
+   text-decoration: underline;
+ }
+
+ .converter {
+   background: white;
+   padding: 1.5rem;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   margin-bottom: 2rem;
+   display: none;
+ }
+
+ label,
+ select,
+ input {
+   display: block;
+   margin-top: 1rem;
+   width: 100%;
+   padding: 0.5rem;
+   border-radius: 8px;
+   border: none;
+   font-size: 18px;
+ }
+
+ select {
+   background-color: #333;
+   color: #fff;
+
+ }
+
+ input {
+   border: 1px solid #333;
+ }
+
+ .result {
+   margin-top: 1rem;
+   font-weight: bold;
+ }
+
+ .ads {
+   margin: 2rem 0;
+   text-align: center;
+ }
+
+ .cta-btn {
+   margin-top: 15px;
+   padding: 10px;
+   background-color: rgb(35, 129, 180);
+   color: white;
+   border: none;
+   width: 150px;
+   border-radius: 8px;
+   transition: all 0.5s ease;
+ }
+
+ .cta-btn:hover {
+   background-color: rgb(31, 113, 156);
+   cursor: pointer;
+ }
+
+ h1 {
+   text-align: center;
+   margin: 15px 0;
+   font-size: 25px;
+ }
+
+ .main {
+   padding: 1rem;
+ }
+
+ @media only screen and (min-width: 698px) {
+   body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     background-color: #f9f9f9;
+     display: flex;
+     min-height: 100vh;
+   }
+
+   .sidebar {
+     width: 250px;
+   }
+
+   .main {
+     padding: 2rem;
+     width: 65% !important;
+     margin: 0 auto;
+   }
+
+   .sidebar ul {
+     flex-direction: column;
+     row-gap: 15px;
+     margin-top: 25px;
+   }
+
+ }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Convertisseur en ligne tout-en-un : distance, température, devises et plus. Gratuit, rapide et facile à utiliser.">
+  <meta name="keywords"
+    content="convertisseur, distance, température, devises, poids, km en miles, euro en dollar, celsius en fahrenheit">
+
+  <title>Convertisseur Tout-en-Un : Devises, Température, Distance et Poids</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2>Catégories</h2>
+    <ul>
+      <li onclick="showConverter('distance')">Distance</li>
+      <li onclick="showConverter('temperature')">Température</li>
+      <li onclick="showConverter('currency')">Devises</li>
+      <li onclick="showConverter('weight')">Poids</li>
+    </ul>
+  </div>
+  <div class="main">
+    <h1>Convertisseur Tout-en-Un</h1>
+
+    <!-- Convertisseur de distance -->
+    <div class="converter" id="distance">
+      <h2>Distance</h2>
+      <label for="distanceType">Choisissez le type de conversion :</label>
+      <select id="distanceType">
+        <option value="km_miles">Kilomètres ↔ Miles</option>
+        <option value="km_m">Kilomètres ↔ Mètres</option>
+        <option value="mm_km">Millimètres ↔ Kilomètres</option>
+        <option value="m_km">Mètres ↔ Kilomètres</option>
+        <option value="cm_km">Centimètres ↔ Kilomètres</option>
+        <option value="km_cm">Kilomètres ↔ Centimètres</option>
+        <option value="mm_m">Millimètres ↔ Mètres</option>
+        <option value="m_mm">Mètres ↔ Millimètres</option>
+        <option value="cm_m">Centimètres ↔ Mètres</option>
+        <option value="m_cm">Mètres ↔ Centimètres</option>
+      </select>
+      <input type="number" id="distanceInput" placeholder="Entrez une valeur">
+      <button onclick="convertDistance()" class="cta-btn">Convertir</button>
+      <p class="result" id="kmResult"></p>
+    </div>
+
+    <!-- Convertisseur de température -->
+    <div class="converter" id="temperature">
+      <h2>Température</h2>
+      <label for="tempType">Choisissez le type de conversion :</label>
+      <select id="tempType">
+        <option value="c_f">Celsius ↔ Fahrenheit</option>
+        <option value="f_c">Fahrenheit ↔ Celsius</option>
+        <option value="c_k">Celsius ↔ Kelvin</option>
+      </select>
+      <input type="number" id="celsiusInput" placeholder="Entrez une valeur">
+      <button onclick="convertTemp()" class="cta-btn">Convertir</button>
+      <p class="result" id="celsiusResult"></p>
+    </div>
+
+    <!-- Convertisseur devises -->
+    <div class="converter" id="currency">
+      <h2>Convertisseur de devises</h2>
+
+      <label for="fromCurrency">De :</label>
+      <select id="fromCurrency">
+        <option value="USD">Dollar (USD)</option>
+        <option value="EUR" selected>Euro (EUR)</option>
+        <option value="GBP">Livre (GBP)</option>
+        <option value="JPY">Yen (JPY)</option>
+        <option value="CHF">Franc Suisse (CHF)</option>
+        <option value="CAD">Dollar Canadien (CAD)</option>
+        <option value="AUD">Dollar Australien (AUD)</option>
+        <!-- Ajoute d'autres devises ici -->
+      </select>
+
+      <label for="toCurrency">Vers :</label>
+      <select id="toCurrency">
+        <option value="USD">Dollar (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="GBP" selected>Livre (GBP)</option>
+        <option value="JPY">Yen (JPY)</option>
+        <option value="CHF">Franc Suisse (CHF)</option>
+        <option value="CAD">Dollar Canadien (CAD)</option>
+        <option value="AUD">Dollar Australien (AUD)</option>
+        <!-- Ajoute d'autres devises ici -->
+      </select>
+
+      <label for="amount">Montant :</label>
+      <input type="number" id="amount" placeholder="Entrez le montant" />
+
+      <button onclick="convertCurrency()" class="cta-btn">Convertir</button>
+
+      <p class="result" id="conversionResult"></p>
+    </div>
+
+    <div class="converter" id="weight">
+      <h2>Poids</h2>
+      <label for="weightType">Choisissez le type de conversion :</label>
+      <select id="weightType">
+        <option value="kg_lb">Kilogrammes ↔ Livres</option>
+        <option value="kg_g">Kilogrammes ↔ Grammes</option>
+        <option value="g_kg">Grammes ↔ Kilogrammes</option>
+        <option value="lb_kg">Livres ↔ Kilogrammes</option>
+      </select>
+      <input type="number" id="weightInput" placeholder="Entrez une valeur">
+      <button onclick="convertWeight()" class="cta-btn">Convertir</button>
+      <p class="result" id="weightResult"></p>
+    </div>
+
+    <!-- Emplacement pour pub AdSense -->
+    <div class="ads">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Convertisseur Tout-en-Un",
+  "url": "https://www.tonsite.com",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+</body>
+
+</html>

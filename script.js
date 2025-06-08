@@ -101,31 +101,31 @@
 
         switch (from) {
           case "EUR":
-            symbolFrom = "🇪🇺";
+            symbolFrom = "€ 🇪🇺";
             break;
           case "USD":
-            symbolFrom = "🇺🇸";
+            symbolFrom = "$ 🇺🇸";
             break;
           case "GBP":
-            symbolFrom = "🇬🇧";
+            symbolFrom = "£ 🇬🇧";
             break;
           case "JPY":
-            symbolFrom = "🇯🇵";
+            symbolFrom = "¥ 🇯🇵";
             break;
           case "CHF":
-            symbolFrom = "🇨🇭";
+            symbolFrom = "CHF 🇨🇭";
             break;
           case "CAD":
-            symbolFrom = "🇨🇦";
+            symbolFrom = "C$ 🇨🇦";
             break;
           case "AUD":
-            symbolFrom = "🇦🇺";
+            symbolFrom = "A$ 🇦🇺";
             break;
           case "MAD":
-            symbolFrom = "🇲🇦";
+            symbolFrom = "د.م. 🇲🇦";
             break;
           case "DZD":
-            symbolFrom = "🇩🇿";
+            symbolFrom = "د.ج 🇩🇿";
             break;
           default:
             symbolFrom = from;
@@ -133,34 +133,34 @@
 
         switch (to) {
             case "EUR":
-            symbolTo = "🇪🇺";
+            symbolTo = "€ 🇪🇺";
             break;
           case "USD":
-            symbolTo = "🇺🇸";
+            symbolTo = "$ 🇺🇸";
             break;
           case "GBP":
-            symbolTo = "🇬🇧";
+            symbolTo = "£ 🇬🇧";
             break;
           case "JPY":
-            symbolTo = "🇯🇵";
+            symbolTo = "¥ 🇯🇵";
             break;
           case "CHF":
-            symbolTo = "🇨🇭";
+            symbolTo = "CHF 🇨🇭";
             break;
           case "CAD":
-            symbolTo = "🇨🇦";
+            symbolTo = "C$ 🇨🇦";
             break;
           case "AUD":
-            symbolTo = "🇦🇺";
+            symbolTo = "A$ 🇦🇺";
             break;
           case "MAD":
-            symbolTo = "🇲🇦";
+            symbolTo = "د.م. 🇲🇦";
             break;
           case "DZD":
-            symbolTo = "🇩🇿";
+            symbolTo = "د.ج 🇩🇿";
             break;
           default:
-            symbolTo = from;
+            symbolTo = to;
         }
 
         document.getElementById('conversionResult').textContent = `${amount} ${symbolFrom} = ${converted} ${symbolTo} (Taux: ${rate})`;

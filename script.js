@@ -96,8 +96,74 @@
         }
 
         const converted = (amount * rate).toFixed(2);
+        let symbolFrom;
+        let symbolTo;
 
-        document.getElementById('conversionResult').textContent = `${amount} ${from} = ${converted} ${to} (Taux: ${rate})`;
+        switch (from) {
+          case "EUR":
+            symbolFrom = "🇪🇺";
+            break;
+          case "USD":
+            symbolFrom = "🇺🇸";
+            break;
+          case "GBP":
+            symbolFrom = "🇬🇧";
+            break;
+          case "JPY":
+            symbolFrom = "🇯🇵";
+            break;
+          case "CHF":
+            symbolFrom = "🇨🇭";
+            break;
+          case "CAD":
+            symbolFrom = "🇨🇦";
+            break;
+          case "AUD":
+            symbolFrom = "🇦🇺";
+            break;
+          case "MAD":
+            symbolFrom = "🇲🇦";
+            break;
+          case "DZD":
+            symbolFrom = "🇩🇿";
+            break;
+          default:
+            symbolFrom = from;
+        }
+
+        switch (to) {
+            case "EUR":
+            symbolTo = "🇪🇺";
+            break;
+          case "USD":
+            symbolTo = "🇺🇸";
+            break;
+          case "GBP":
+            symbolTo = "🇬🇧";
+            break;
+          case "JPY":
+            symbolTo = "🇯🇵";
+            break;
+          case "CHF":
+            symbolTo = "🇨🇭";
+            break;
+          case "CAD":
+            symbolTo = "🇨🇦";
+            break;
+          case "AUD":
+            symbolTo = "🇦🇺";
+            break;
+          case "MAD":
+            symbolTo = "🇲🇦";
+            break;
+          case "DZD":
+            symbolTo = "🇩🇿";
+            break;
+          default:
+            symbolTo = from;
+        }
+
+        document.getElementById('conversionResult').textContent = `${amount} ${symbolFrom} = ${converted} ${symbolTo} (Taux: ${rate})`;
       } catch (error) {
         document.getElementById('conversionResult').textContent = "Erreur lors de la conversion. Veuillez réessayer plus tard.";
         console.error(error);

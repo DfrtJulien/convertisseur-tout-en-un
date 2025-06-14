@@ -13,9 +13,9 @@
   <meta property="og:type" content="website">
   <title>Convertisseur Tout-en-Un : Devises, Température, Distance et Poids</title>
 
-  <link rel="stylesheet" href="public/style/style.css">
+  <link rel="stylesheet" href="/../public/style/style.css">
   <link rel="icon" type="image/png" href="favicon.png">
-   <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -48,49 +48,25 @@
     <ul>
       <li><a href="/convertisseur-distance/index.html">Distance</a></li>
       <li><a href="/convertisseur-temperature/index.html">Température</a></li>
-      <li><a href="index.html">Devises</a></li>
+      <li><a href="../index.html">Devises</a></li>
       <li><a href="/convertisseur-poids/index.html">Poids</a></li>
     </ul>
   </nav>
   <section class="section">
     <div class="main">
       <h1>Convertisseur Tout-en-Un</h1>
-      <div class="converter" id="currency">
-        <h2>Convertisseur de devises</h2>
-
-        <label for="fromCurrency">De :</label>
-        <select id="fromCurrency">
-          <option value="USD">Dollar 🇺🇸</option>
-          <option value="EUR" selected>Euro 🇪🇺</option>
-          <option value="GBP">Livre 🇬🇧</option>
-          <option value="JPY">Yen 🇯🇵</option>
-          <option value="CHF">Franc Suisse 🇨🇭</option>
-          <option value="CAD">Dollar Canadien 🇨🇦</option>
-          <option value="AUD">Dollar Australien 🇦🇺</option>
-          <option value="MAD">Dirham 🇲🇦</option>
-          <option value="DZD">Dinhar 🇩🇿</option>
-          <!-- Ajoute d'autres devises ici -->
+      <div class="converter" id="weight">
+        <h1>Poids</h1>
+        <label for="weightType">Choisissez le type de conversion :</label>
+        <select id="weightType">
+          <option value="kg_lb">Kilogrammes ↔ Livres</option>
+          <option value="kg_g">Kilogrammes ↔ Grammes</option>
+          <option value="g_kg">Grammes ↔ Kilogrammes</option>
+          <option value="lb_kg">Livres ↔ Kilogrammes</option>
         </select>
-
-        <label for="toCurrency">Vers :</label>
-        <select id="toCurrency">
-          <option value="USD">Dollar 🇺🇸</option>
-          <option value="EUR" selected>Euro 🇪🇺</option>
-          <option value="GBP">Livre 🇬🇧</option>
-          <option value="JPY">Yen 🇯🇵</option>
-          <option value="CHF">Franc Suisse 🇨🇭</option>
-          <option value="CAD">Dollar Canadien 🇨🇦</option>
-          <option value="AUD">Dollar Australien 🇦🇺</option>
-          <option value="MAD">Dirham 🇲🇦</option>
-          <option value="DZD">Dinhar 🇩🇿</option>
-        </select>
-
-        <label for="amount">Montant :</label>
-        <input type="number" id="amount" placeholder="Entrez le montant" />
-
-        <button onclick="convertCurrency()" class="cta-btn">Convertir</button>
-
-        <p class="result" id="conversionResult"></p>
+        <input type="number" id="weightInput" placeholder="Entrez une valeur">
+        <button onclick="convertWeight()" class="cta-btn">Convertir</button>
+        <p class="result" id="weightResult"></p>
       </div>
     </div>
     <!-- Emplacement pour pub AdSense -->
@@ -126,12 +102,11 @@
 
   </section>
 
-
   <!-- Bloc annonnce -->
 
 
-  <script type="text/javascript" src="public/js/script.js"></script>
- 
+  <script type="text/javascript" src="/../public/js/script.js"></script>
+
 </body>
 
 </html>

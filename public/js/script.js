@@ -1,11 +1,6 @@
 
 
- 
- 
- function showConverter(id) {
-      document.querySelectorAll('.converter').forEach(div => div.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-    }
+
 
     function convertDistance() {
       const value = parseFloat(document.getElementById('distanceInput').value);
@@ -169,7 +164,7 @@
         console.error(error);
       }
     }
-    showConverter('distance');
+   
     function convertWeight() {
       const value = parseFloat(document.getElementById('weightInput').value);
       const type = document.getElementById('weightType').value;
@@ -195,4 +190,3 @@
       document.getElementById('weightResult').textContent = result;
     }
 
-    showConverter('weight')

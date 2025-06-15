@@ -76,6 +76,7 @@
  .ads {
    margin: 2rem 0;
    text-align: center;
+   min-height: 350px;
  }
 
  .cta-btn {

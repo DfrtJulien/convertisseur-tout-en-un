@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,          
+  "trailingSlash": false,
+   "rewrites": [
+    { "source": "/a-propos", "destination": "/a-propos/index.html" },
+    { "source": "/convertisseur-distance", "destination": "/convertisseur-distance/index.html" },
+    { "source": "/convertisseur-poids", "destination": "/convertisseur-poids/index.html" },
+    { "source": "/convertisseur-temperature", "destination": "/convertisseur-temperature/index.html" },
+    { "source": "/mention-legales", "destination": "/mention-legales/index.html" }
+  ]
+}

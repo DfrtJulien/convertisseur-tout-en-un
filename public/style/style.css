@@ -4,6 +4,7 @@
    box-sizing: border-box;
  }
 
+
  a {
   text-decoration: none;
   color: inherit;
@@ -77,6 +78,15 @@
    margin: 2rem 0;
    text-align: center;
    min-height: 150px;
+   width: 355px;
+ }
+
+ .adsbygoogle, #aswift_1_host, #aswift_1 {
+  width: 355px !important;
+ }
+
+ h2 {
+  margin-bottom: 10px;
  }
 
  .cta-btn {
@@ -112,6 +122,11 @@
   border-left: 1px solid white;
  }
 
+.description-convertisseur {
+    margin-top: 8px;
+   }
+
+
  @media only screen and (min-width: 698px) {
    body {
      font-family: Arial, sans-serif;
@@ -141,4 +156,5 @@
      margin-top: 25px;
    }
 
+   
  }
